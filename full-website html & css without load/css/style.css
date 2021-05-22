@@ -1,0 +1,1429 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'work sans' , sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'oswald', sans-serif;
+}
+
+/* start main ruls */
+.container {
+    width: 1140px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    transition: 0.3s
+}
+/* end main ruls */
+
+/* start top bar and primary menu */
+header#top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.top-bar {
+    background: #ddd;
+    height: 30px;
+    transition: 0.3s
+}
+
+.top-bar-content {
+    overflow: hidden;
+    transition: 0.3s
+}
+
+.phone, .email {
+    float: left;
+    margin: 5px;
+    border-left: 1px solid #c2bbbb;
+    padding-left: 7px;
+    transition: 0.3s
+}
+
+.phone {
+    width: 20%;
+}
+
+.phone i, .email i{
+    margin-right: 7px;
+    color: #ff5200;
+    transition: 0.3s
+}
+
+.social {
+    float: right;
+    margin: 7px;
+    transition: 0.3s
+}
+
+
+.social a {
+    color: black;
+    border-right: 1px solid #c2bbbb;
+    padding: 0px 10px 0 4px;
+    transition: 0.3s;
+}
+
+.social a:first-of-type {
+    border-left: 1px solid #c2bbbb;
+    padding-left: 9px
+}
+
+.social i:hover {
+    color: #ff5200;
+    transition: 0.2s
+}
+
+.primary-menu-content {
+    overflow: hidden;
+}
+
+
+
+
+.primary-menu {
+    background-color: black
+}
+
+.logo {
+    float: left;
+    overflow: hidden;
+}
+
+.logo img, .logo div, .logo span {
+    float: left;
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    margin: 6px;
+    padding: 0 9px;
+    background: red;
+    color: azure;
+}
+
+.logo div {
+    margin: 10px 10px 10px 11px;
+    font-size: 30px;
+    color: #ff5200;
+    font-family: emoji;
+    text-transform: capitalize;
+    text-shadow: 1px 2px 3px black;
+}
+
+.logo img {
+    margin-top: 12px;
+    transition: 0.3s
+}
+
+.menu {
+    float: right;
+    transition: 0.3s
+}
+
+.menu ul {
+    list-style: none;
+    margin: 14px 2px 2px 2px;
+    overflow: hidden;
+    transition: 0.3s
+}
+
+.menu ul li {
+    float: left;
+    margin: 2px 17px;
+    font-family: oswald;
+    font-size: 20  px;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: 0.3s
+}
+
+.menu ul li i {
+    color: #fb5200;
+    margin-left: 5px
+}
+
+.menu a.mmmmm {
+    margin-left: 33px /* ana 3amelha alshan el lest eley btenzel tegy fe elnos laan el transform scaleY amel moshkela  */
+}
+
+ul.sub-menu {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    line-height: 33px;
+    background: black;
+    border-top: 1px solid #fb5200;
+    padding: 10px 0;
+    transform: translateX(-36px);
+    position: absolute;
+    transform: scaleY(0); /* يعني بيصغرها و يضغطها كدا */ 
+    transform-origin: top; /* علشان بعد ما نصغرها و نضغطها من السكيل نحدد مكانها */ 
+    visibility: hidden;
+    overflow: visible; /* alashan el submenu el tanya tban */
+    transition: 0.3s
+}
+
+ul.sub-menu li {
+    float: none;
+    font-size: 15px;
+    display: block; /* alshan a3araf adelo width */
+    width: 86%; /* edyto width alashan lama aroh lel sab el tanya msh we ana fe altarek troh elshab eltanya mkfola we te5tefe alshan mbketsh dayes ala el li alshan ahel el moshkela de edet el 3rd 85% aknaha 100% lan lama ba3melha 100% btetla3 bara zysda an el mohtawa we alashan fe3lan ya5od el ard da lazem ade desplay block */
+    position: relative  /* sun menu 2 */
+}
+
+ul.sub-menu li a {
+    transform: 0.6s
+}
+
+ul.sub-menu li a:before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: #fb5200;
+    display: inline-block;
+    margin-right: 8px;
+/*    transform: translateY(-3px);*/
+    vertical-align: middle;
+    transition: 0.6s
+}
+
+ul.sub-menu li:hover a:before {
+    width: 11px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #fb5200;
+    transition: 0.2s
+}
+
+.menu ul a:hover {
+    color: white;
+}
+
+.menu > ul > li {
+    margin: 2px 0
+}
+
+.menu > ul > li:last-child {
+    margin-left: 35px
+}
+
+.menu ul:first-child > li { /* el awlad el mobashra fakat mesh el ahfad */
+    height: 33px;
+}
+
+.menu ul:first-child li:hover ul.sub-menu {
+    visibility: visible;
+    transform: scaleY(1);
+/*    transform: matrix(1, 0, 0, 1, -33, 0);*/
+
+}
+
+ul.sub-menu2 {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    line-height: 33px;
+    background: black;
+    border-left: 1px solid #fb5200;
+    padding: 10px 0;
+    transform: translateX(-36px);
+    position: absolute;
+    left: 122px;
+    top: -10px;
+    width: 160px;
+    transform: scaleX(0);
+    transform-origin: left;
+    visibility: hidden;
+    transition: 0.3s
+}
+
+ul.sub-menu li:hover ul.sub-menu2 {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* law shelt elly taht da el sub menu2 lama tetfeth hykon kol el anaser gambaha sharta we lonha bortokaly 3ady wa laysa abyad */
+ul.sub-menu2 li a:before {
+    width: 0 !important; /* el !important de btedy awlaweya koswa yany hena masalan fe kada width byehsal fheya hata5od da alashan ana edito awlaweya an baky el with el tanya */ 
+}
+
+ul.sub-menu2 li:hover a:before {
+    width: 10px !important; /* alashan fe3mel haver yshel el embortant ladem ykon el 5aseya elly fe elhaver important bardo (el important ma beyshelosh 3er el emportant) */
+}
+
+/* end top bar and primary menu */
+
+/* start slider */
+#home-slider {
+    background: url("../img/test1.jpg");
+    height: 610px;
+    background-position: 7% 52%;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size: cover /* علشان لما نعل زوم اوت او ان ميحصلش حاجة في الصورة مش تختفي او تتحرك او كدا */
+}
+
+.home-slider-content {
+    padding-top: 50px;
+    width: 519px;
+}
+
+.home-slider-content h1 {
+    font-size: 55px;
+    text-transform: capitalize;
+    padding-top: 35px;
+    color: white;
+    text-shadow: 6px 6px 5px black;
+}
+
+.home-slider-content p {
+    font-size: 20px;
+    font-weight: 600;
+    width: 380px;
+    margin-bottom: 35px;
+    color: wheat;
+    /* letter-spacing: 0px; */
+    word-spacing: 2px;
+    background: linear-gradient(#00000073,#00000073);
+    padding: 10px;
+}
+
+
+.home-slider-content button {
+    border: none;
+    background-color: #ff4000;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    height: 45px;
+    transition: 0.3s
+}
+
+.home-slider-content button:hover a{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    transition: 0.5s
+}
+
+.home-slider-content button a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    line-height: 43px;
+    color: black;
+    transition: 0.4s
+}
+
+.slider-point-nav {
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    margin-top: 105px;
+}
+
+.slider-point-nav span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 2px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.slider-point-nav span:hover {
+    background-color: #ff5200;
+    border: 2px solid #ff5200;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.slider-point-nav span:first-of-type{
+    background-color: #ff5200;
+    border: 2px solid #ff5200;
+}
+
+/* end slider */
+
+/* start services */
+#services {
+    overflow: hidden;
+    background: black
+}
+
+.div-first-h2 {
+    text-align: center
+}
+
+#services #first-h2 {
+    text-align: center;
+    color: wheat;
+    margin-top: 60px;
+    border-bottom: 2px solid #fb5200;
+    border-top: 2px solid #fb5200;
+    display: inline-block;
+    padding: 10px 2px
+}
+
+.services-content {
+    margin: 35px 5px 75px;
+    overflow: hidden
+}
+
+.single-box {
+    float: left;
+    width: 233px;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    margin: 10px;
+    transition: 0.3s
+}
+
+.single-box:hover {
+    background: #ff5200;
+    box-shadow: 1px 2px 5px white, -1px -2px 5px white;
+    color: black;
+    cursor: pointer;
+}
+
+.single-box:active {
+    background: green
+}
+
+.single-box .sbox-icon {
+    margin: 30px 1px 33px;
+}
+
+.single-box .sbox-title {
+    margin-bottom: 45px
+}
+
+.single-box .sbox-desc {
+    margin-bottom: 38px;
+}
+
+.single-box .sbox-link {
+    margin-bottom: 13px
+}
+
+.active {
+        background: #ff5200;
+    box-shadow: 1px 2px 5px white, -1px -2px 5px white;
+    color: black;
+    cursor: pointer;
+}
+
+.single-box .sbox-link a {
+    text-decoration: none
+}
+/* end services */
+
+/* strat our team */
+.our-team-content{
+    overflow: hidden;
+    margin: 80px 2px;
+}
+
+.team-img {
+    width: 550px;
+    float: left;
+    height: 400px
+}
+
+.team-img img {
+    max-width: 100%;
+    height: 100%
+}
+
+.team-details {
+    float: right;
+    width: 550px;
+}
+
+.title-desc h2 {
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+   /* text-align: center */
+}
+
+.title-desc p {
+    color: #666;
+    line-height: 25px;
+    margin-bottom: 28px;
+    /* text-align: center; */
+}
+
+.lists-facilities {
+    overflow: hidden;
+    margin-bottom: 17px
+}
+
+.lists-facilities ul {
+    float: left;
+    list-style: none;
+   /* margin: 0 40px 0; */
+    line-height: 30px;
+    padding: 0
+}
+
+.lists-facilities ul:first-of-type {
+    margin-right: 150px
+}
+
+.lists-facilities ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.2s
+}
+
+.lists-facilities ul li a:hover {
+    color: #ff5200
+}
+
+.lists-facilities ul li a i {
+    font-size: 11px
+}
+
+.team-content-abutton a {
+    background-color: black;
+    color: #E7BE6F;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 40px;
+    width: 118px;
+    display: inline-block;
+    /* margin: 0 208px; */
+    text-transform: capitalize;
+    transition: 0.3s
+}
+
+.team-content-abutton a:hover {
+    color: black;
+    background-color: #fb5200;
+}
+/* end our team */
+
+/* start choose us */
+#why-choose-us {
+    background: linear-gradient(#00000073,#00000073),  url(../img/choose-us.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%
+}
+
+.choose-us-content {
+    text-align: center
+}
+
+.single-icons {
+    text-align: center;
+    background: none;
+    color: white;
+    display: inline-block; /* علشان لما نديلو مارجن مش يعمل مارجين و المارج يطلع برة المحتوي و مهما تزود المارجن العنصر في مكانو متحرفكش فعلشان كدا بتديلو دسبلاي انالاين بلوك عشلن لما تعمل مارجن يعملها بالنسبة للعنصر اللي بيحتوية */
+    margin: 40px 35px;
+}
+
+.single-icons .sicon {
+    font-size: 35px;
+}
+
+.single-icons h2 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 0
+}
+
+.single-icons h4 {
+    font-size: 20px;
+        margin-bottom: 0
+
+}
+/* end choose us */
+
+/* start more from us */
+#more-from-us {
+    background-color: #f5f6f6
+}
+.sec-title {
+    margin: 0 20px 20px;
+    text-align: center;
+}
+
+.sec-title div {
+    width: 255px;
+    display: inline-block;
+    margin: 60px auto 10px;
+    border-bottom: 1px solid red;
+    height: 45px;
+}
+
+.sec-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 0;
+    position: relative; /* اكننا بنقولو اعتبر دا الاب بتاع العنصر اللي واخد بوسيشن ابستراكت و الليفت و البوت و الرايت و ... دي كلها اعملها بالنسبة للعنصر دا */
+    padding: 0 0 13px
+}
+
+.sec-title h2:after {
+    content: "";
+    position: absolute; /* علشان يظهر بالنسبة للعنصر الللي واخد بوسيشن ريليتف و نقدر ندي للعنصر دا بوتوم صفر و لفت و رايت و .... */
+    border-bottom: 4px solid red;
+    width: 100px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-48px);
+    /* left: 42.2%; ممكن نعمل السطر دا و نظبط الخط اللي تحت دا في النص بستخدام الليفت بس مش لازم ترانسفورم */
+}
+
+.sec-title p {
+    width: 555px;
+    margin: 19px auto;
+    font-size: 16px;
+    color: #666
+}
+
+.posts {
+    overflow: hidden;
+    padding-bottom: 50px
+}
+
+.single-post {
+    width: 265px;
+    text-align: center;
+    float: left;
+    margin-top: 10px
+}
+
+.single-post .post-img img {
+    max-width: 100%;
+    height: 164px;
+    margin-bottom: 15px;
+    box-shadow: 1px 2px 3px #817c7c, -1px -2px 3px #817c7c
+}
+
+.post-info p{
+    margin-top: 10px;
+    color: #666;
+    line-height: 23px;
+    padding: 0 26px
+}
+
+/*
+.posts div.single-post:not(.not-marginr) {
+    margin-right: 20px
+}
+*/
+
+.posts .single-post:nth-child(1), .posts .single-post:nth-child(2), .posts .single-post:nth-child(3) {
+    margin-right: 20px
+}
+/* end more from us */
+
+/* start pricing*/
+#pricing {
+    margin-bottom: 60px;
+}
+
+.table-list {
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    perspective: 700px;
+    transition: 2s
+}
+
+.single-table {
+    flex-grow: 1;
+    float: left;
+    border: 1px solid #eaeaea;
+    /*overflow: hidden*/
+    margin-right: 13px;
+    box-shadow: -1px 0px 8px -2px black;
+    /*box-shadow: 0px 0px 30px -25px black*/
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d
+}
+
+.rotate {
+    margin-right:10px
+}
+
+.rotate:hover .single-table { /* ana 3amalt el div el rotate alshan lama akf aleh el def el single ylef 360 daraga lany lw koltelo lama te3mel haver ala el single nafso ylef hyehsal moshkela we heya an ana lama baharak el mawes we hawa bylef awkat el mawes mbykonsh 3aleh lan mesahto ptes8ar falashan keda 5alet el div rotate yahtawe b7es lama akaf ala el div rotate el single ylef we mahma harakt el mawes msh yehsal mashakel lan meshaket el div rotate mesh hates8ar wala tekbar lano mbylefesh wala byehsalo haga */
+    transform: rotateY(360deg);
+    background: #88b1db
+}
+
+.single-table:last-of-type {
+    margin-right: 0;
+}
+
+.single-table h3 {
+    font-size: 25px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.single-table h1 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: arial black;
+    margin: 0;
+    text-align: center
+}
+
+.single-table h1 span {
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: arial
+}
+
+.single-table ul {
+    line-height: 36px;
+    list-style: none;
+    padding-left: 23px;
+    margin: 22px 0 5px;
+}
+
+.single-table ul li {
+    color: #666
+}
+
+.single-table ul i {
+    font-size: 16px;
+    color: #fb5200
+}
+
+.single-table ul li span {
+    color: #ba0000;
+    font-size: 24px;
+    font-weight: bold
+}
+
+.single-table button {
+    background-color: #fb5200;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-weight: 800;
+    font-family: oswald;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 20px 51px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.3s
+}
+
+.single-table button:hover {
+    color: white;
+    background: #333;
+    cursor: pointer
+}
+/* end pricing*/
+
+/* start latest idea */
+#ideas {
+    overflow: hidden;
+    height: 445px;
+}
+
+.idea-img {
+    background: url(../img/latest-idea.jpeg);
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    float: left;
+    height: 100%;
+}
+
+.idea-right-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    background: #222222;
+    color: white;
+    overflow: hidden
+}
+
+.idea-content-title {
+    margin: 50px 50px 50px 70px
+}
+
+.idea-content-title h2 {
+    font-size: 30px;
+}
+
+.idea-content-icons {
+    margin: 0 0 20px 70px;
+    overflow: hidden
+}
+
+.idea-single-icon {
+    overflow: hidden;
+    float:left;
+    margin-bottom: 30px
+}
+
+.idea-single-icon .iicon {
+    float: left;
+    font-size: 33px;
+    padding: 16px 30px 2px 2px;
+    color: #fb5200;
+}
+
+.idea-single-icon .iicon-details {
+    float: left
+}
+
+.iicon-details h3 {
+    font-size: 20px;
+    margin: 15px 0 2px 0;
+    transition: 0.4s
+}
+
+.iicon-details h3:hover {
+    color: #fb5200;
+    cursor: pointer;
+}
+
+.idea-right-content p {
+    color: #727272;
+    font-size: 16px;
+    margin-top: 10px
+}
+
+/*
+.idea-content-icons .idea-single-icon:nth-child(1) .iicon-details, .idea-content-icons .idea-single-icon:nth-child(3) .iicon-details {
+    margin-right: 100px
+}
+*/
+
+.idea-content-icons .idea-single-icon:nth-child(1) {
+    margin-right: 45px
+}
+
+.idea-content-icons .idea-single-icon:nth-child(3) {
+    margin-right: 50px;
+    margin-left: 8px
+}
+
+.idea-right-content h2, .idea-right-content h3 {
+    text-transform: capitalize
+}
+/* end latest idea */
+
+/* start our team */
+    /*we take the style of posts in start more from us */
+.team-persons {
+    padding-top: 35px
+}
+
+.team-persons .single-post .post-img img {
+    height: 315px;
+    width: 98%;
+    transition: 0.9s
+}
+
+/* كنت عاوز اعمل الفكرة دي علشان الايكونات بتعت السوشال ميديا تظهر بس كلو كان تمام الا حاجة واحدة و هوا ان عاوز احط في الكونتينت بدل ما اكتب كلام احط الايكونات لكن مش عارف فهمنعملها بطريقة تانية و اننا نضيف ديف و نخلية يجي فوق الايميج */
+/*
+.post-img {
+    position: relative
+}
+
+.post-img:before {
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    background: red;
+    width: 0;
+    overflow: hidden;
+}
+
+.post-img:hover:before {
+    width: 77.5%;
+    transition: 0.5s
+}
+*/
+
+.post-img {
+    position: relative
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 85px;
+    left: 30px;
+    width: 77.5%;
+    text-align: center;
+ /*1   height: 33px; */
+ /*1   line-height: 33px; */
+ /*1   background: linear-gradient(#00000073,#00000073); */
+}
+
+.social-icons a {
+/*    background: linear-gradient(#881919de,#1d177073);*/
+    background: linear-gradient(#00000073,#00000073);
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block; /* mmken ne3mel hena desplay grid alshan nozpot el aykona fe el nos blzabt men fok we taht bs lazem tedy hena float left */
+    transition: 0.4s
+}
+
+.social-icons a:first-child {
+    color: #3b5998;
+    opacity: 0; /* علشان تكون مخفية */
+    transition: 0.9s
+}
+
+.social-icons a:nth-child(2) {
+    color: #00acee;
+    opacity: 0;
+    transition: 0.7s
+}
+
+.social-icons a:nth-child(3) {
+    color: #db4a39;
+    opacity: 0;
+    transition: 0.5s
+}
+
+.social-icons a:last-child {
+    color: #0e76a8;
+    opacity: 0;
+    transition: 0.3s
+}
+
+.team-persons .single-post:hover .social-icons a:first-child {
+    opacity: 1;
+    transform: translateY(40px); /* الاوباسيتي تظهر العنصر عادي و لما يظهر التراسفورق ترانسيشن واي دي هتخلية ينزل لتحت او لفوق حسب القيمة سالب ولا موجب بحيث لما يظهر ينزل لتحت كدا و يكون شكلو جميل */
+}
+
+.team-persons .single-post:hover .social-icons a:nth-child(2) {
+    opacity: 1;
+    transform: translateY(40px)
+}
+
+.team-persons .single-post:hover .social-icons a:nth-child(3) {
+    opacity: 1;
+    transform: translateY(40px)
+}
+
+.team-persons .single-post:hover .social-icons a:nth-child(4) {
+    opacity: 1;
+    transform: translateY(40px)
+}
+
+.team-persons .single-post:hover .post-img img {
+    transform: scale(1.07) /* علشان الصورة تقرب عايك شوية */
+}
+
+.team-persons .social-icons a:hover {
+    background-color: white; /* كدا لما تعمل هافر هيشيب الباك جراوند الداكنة اللي انت مديهالو فوق في الاساسي و يضيف تحتها باك جراوند لونها ابيض طيب لو انت عاوز يشيل الباك جراوند الداكنة دي خالص و يحطلك الابيض علي طول مكانها بدل ما بتكتب هنا باك جراوند كلور هتكتب باك جراوند بس زي اللي فوق علشان يشيلها و يحطلك دي مكانها */
+    color: #333;
+    transition: 0.4s
+}
+
+.join-our-team-button {
+    text-align: center;
+    margin-bottom: 60px
+}
+
+.join-our-team-button button {
+    background: #fb5200;
+    padding: 10px 25px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s
+}
+
+.join-our-team-button button:hover {
+    background: #333;
+    cursor: pointer
+}
+/* end our team */
+
+/* start our-projects */
+    /* we take the style of sec-title from start more from us */
+#our-projects {
+    background-color: #e8ebeb
+}
+
+.project-wrapper {
+    overflow: hidden;
+}
+
+.single-project {
+    float: left;
+    margin: 17px;
+    position: relative;
+    overflow: hidden
+}
+
+.project-img {
+    width: 344px;
+    height: 218px;
+    /* شكلها هبدة السطر دا كلو بالشرح بتاعو */ /*display: inline-block*/ /* علشان لما اجي اخلي الديف اللي فية الكلام يجي فوق الديف دا مش يحصل مشاكل لاني هعمل بوزيشن ابستراكت للديف اللي هيتحرك و ادي بوزيشن ابسليوت للديف اللي هوا بيحتوي البروجكت اللي اسمو سينجل بروجيكت فلما اعمل كدا لازم الديت اللي هيجي حاجة فوقو يكون واخد ديسبلاي ان لاين بلوك */
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-info {
+    width: 240px;
+    position: absolute;
+    bottom: -44px;
+/*    background: #00000047;*/
+    background: linear-gradient(to top, black, #00000002);
+    color: wheat;
+    padding: 18px 70px 20px 34px;
+    transition: 0.5s
+}
+
+.single-project:hover .project-info {
+    bottom: 0px
+}
+
+.project-info a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+    border-bottom: 2px solid wheat;
+    text-shadow: 1px 1px 3px white, -1px -1px 3px white
+}
+
+.project-info h3 {
+    margin: 9px 0 2px
+}
+
+#learnMoreBtn {
+    transform: translateX(-200px);
+    display: inline-block;
+    visibility: hidden;
+/*    transition-timing-function: ease*/ /* علشان تظهرلي الفانكشنات اللي بتكون في الكونشوف و ابدا اختار و اكون الحركة هتكون ازاي يعني يمشي بسرعة و يجي في الاخر يعدي الماكنال مطلوب و بعدين يرجعلو تاني و يقف او ..... */
+}
+
+.single-project .project-info i {
+    font-size: 15px;
+}
+
+.single-project:hover #learnMoreBtn {
+    transform: translateX(0);
+    transition: 0.8s;
+    transition-delay: 0.2s;
+    visibility: visible;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.38)
+    
+}
+/* end our-projects */
+
+/* start last news */
+#last-news {
+    margin-bottom: 100px
+}
+
+.news-wrapper {
+    overflow: hidden;
+    column-count: 3;
+    padding-top: 33px;
+    margin-bottom: 45px
+}
+
+.single-news {
+    float: left;
+    padding: 10px
+}
+
+.single-news:hover {
+	box-shadow: inset 0 0 0 10px #3498db;
+    transition: 1s
+}
+
+.news-img {
+    overflow: hidden;
+    height: 210px
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 2s
+}
+
+.single-news:hover .news-img img {
+    transform: scale(1.2);
+}
+
+.news-det-img {
+    padding: 25px;
+    border-right: 2px solid #e4e3e3;
+    border-bottom: 2px solid #e4e3e3;
+    border-left: 2px solid #e4e3e3;
+    overflow: hidden; /* علشان سهم الليرن مور لما يطلع برا الديف دا يختفي */
+}
+
+.news-category a {
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
+    transition: 0.2s
+}
+
+.news-category a:hover {
+    color: #fb5200;
+}
+
+.news-category div {
+    display: inline-block;
+    width: 10px;
+    border-bottom: 2px solid #fb5200;
+    margin: 1px 7px 3px;
+}
+
+.news-title h2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.2s
+}
+
+.news-title h2 a:hover {
+    color: #fb5200
+}
+
+.news-title p {
+    color: #777
+}
+
+a#news-read-more {
+    text-decoration: none;
+    color: #fb5200;
+}
+
+a#news-read-more i {
+    font-size: 13px;
+    margin-left: 6px;
+    transition: 0.9s
+}
+
+a#news-read-more:hover i {
+    transform: translateX(250px);
+    transition-timing-function: cubic-bezier(0.87, 0.16, 0.49, 0.57);
+}
+/* end last news */
+
+/* start subscribe */
+#subscribe {
+    margin-bottom: -75px;
+    position: relative;
+}
+
+.subs-boxes-wrapper {
+    background: #fb5200;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.subs-single-box {
+    flex-grow: 1;
+    padding: 10px 40px;
+    overflow: hidden;
+}
+
+.subs-single-box h2 {
+    color: white;
+}
+
+.subs-single-box:first-child input:first-child {
+    width: 75%;
+    padding: 15px;
+    border: none;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    font-family: oswald;
+    letter-spacing: 1px
+}
+
+.input-boxes {
+    position: relative
+}
+
+#subs-submit {
+    padding: 15px;
+    border: none;
+    background: black;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 15px;
+    width: 110px;
+    border-radius: 50px;
+    position: absolute;
+    top: -2px;
+    right: -30px;
+    transition: 0.3s
+}
+
+#subs-submit:hover {
+    color: #fb5200;
+    cursor: pointer
+}
+
+.subs-single-box p {
+    color: wheat;
+}
+
+.subs-follow-icons {
+    margin-top: 35px
+}
+
+.subs-follow-icons a {
+    margin-right: 7px;
+    padding: 10px;
+    border-radius: 47%;
+    border: 2px solid wheat;
+    color: wheat;
+    display: grid;
+    place-items: center;
+    float: left;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.subs-follow-icons a:hover {
+    background: black;
+}
+/* end subscribe */
+
+/* start footer */
+#footer {
+    background: #1a1a1a;
+    padding-bottom: 100px;
+    padding-top: 100px
+}
+
+.fbox-wapper {
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.fsingle-box {
+    float: left;
+    width: 270px;
+    margin-right: 15px;
+    color: #999
+}
+
+.fsingle-box h2 {
+    color: white
+}
+
+.fsingle-box:first-child p {
+    line-height: 30px;
+    padding-left: 2px;
+    width: 90%
+}
+
+.fsingle-box ul {
+    list-style: none;
+    padding-left: 4px;
+}
+
+.fsingle-box:first-child ul {
+    margin-top: 40px
+}
+
+.fsingle-box:first-child ul li a {
+    text-decoration: none;
+    float: left;
+    color: white;
+    transition: 0.3s;
+    background: #666;
+    display: grid; /* 3alashan tbka el background 3ala ad elaykona we madefdalsh ne3mel line-height alshan ne5aly el aykona fe el nos men fok we taht */
+    place-items: center; /* 3lashan yozpot el aykon fe elnos ymen we shemal */
+    border-radius: 1px 27px;
+    margin-right: 10px;
+    padding: 12px;
+}
+
+.fsingle-box:first-child ul li a:hover {
+    color: #fb5200
+}
+
+.fsingle-box ul a {
+    padding-right: 16px;
+}
+
+.ficon-row {
+    overflow: hidden;
+    margin-bottom: 23px;
+}
+
+.fi {
+    float: left;
+    margin-right: 10px;
+    padding-top: 4px;
+    height: 40px
+}
+
+. fphone , .femail {
+    float: right;
+    width: 90%;
+}
+
+.ficon-row .fi i {
+    color: #fb5200
+}
+
+.usefulllinks-content-box ul {
+    line-height: 40px
+}
+
+.usefulllinks-content-box ul i {
+    margin-right: 10px;
+    font-size: 13px
+}
+
+.usefulllinks-content-box ul li a {
+    text-decoration: none;
+    color: #999;
+    /* lw elborder elly ta7t da madetlosh lwn hytlawen ma3 el 3onsor da aw el3onshorbta3o lma a3mel haver */
+    border-bottom: 1px dashed #999; /* lma a3mel elborder hena htlaky msh wasel l8ayet el a5er lan el desplay hena inline 3lshan nt7akem fe elborder hyewsal lfen hnedy desplay block we b3d keda hnedy width lanna law adena wedth ala tol mesh hysama3 */
+    display: block; /* alshan elborder ya5od ek 3ard kolo */
+    width: 215px; /* 3alashan net7akem fe el 3ard we elborder hya5od ad eh */
+    transition: 0.5s
+}
+
+.usefulllinks-content-box ul li:last-child a {
+    border-bottom: 0
+}
+
+.usefulllinks-content-box ul li a:hover {
+    color: #fb5200;
+}
+
+.recent-post-content-box {
+    margin: 22px 2px 40px;
+    overflow: hidden;
+}
+
+.big-num {
+    float: left;
+    background-color: #333;
+    border: 1px solid #6c6c6c;
+    border-radius: 5px
+}
+
+.big-num p {
+    text-align: center;
+    margin: 7px 0;
+    width: 65px;
+}
+
+.after-big-num {
+    float: left;
+    width: 172px;
+    margin-left: 10px;
+    padding-top: 4px
+}
+
+.big-num span {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+.big-num p {
+    text-align: center;
+    margin: 3px 0
+}
+
+.after-big-num h4 {
+    margin-top: 3px;
+    transition: 0.4s
+}
+
+.after-big-num h4:hover {
+    color: #fb5200;
+    cursor: pointer
+}
+
+.after-big-num a {
+    font-size: 12px;
+}
+
+.after-big-num a:first-of-type {
+    margin-right: 15px
+}
+
+.after-big-num a i {
+    margin-right: 3px
+}
+
+.footer-bar {
+    background: #1a1a1a;
+    overflow: hidden;
+    border-top: 1px solid #fb5200;
+    height: 60px;
+    color: #999
+}
+
+.copy {
+    float: left;
+    margin-top: 15px
+}
+
+.last-last {
+    float: right;
+    margin-top: 15px
+}
+
+.last-last a {
+    margin-left: 10px
+}
+
+.last-last span {
+    color: red
+}
+/* end footer */
+
+
